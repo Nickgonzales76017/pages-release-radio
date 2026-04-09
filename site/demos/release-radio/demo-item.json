@@ -6,5 +6,9 @@
   "brief": "Release broadcast summarizes the new GitHub-native intake flow, shared runtime extraction, and the demo-data seeding pass across the Pages fleet. The only breaking-style note is that stale browser token flows are gone in favor of safer GitHub-first launch paths.",
   "tags": ["runtime", "pages", "breaking-change"],
   "flagged": true,
+  "modules": ["bonfyre-brief", "bonfyre-narrate", "bonfyre-render", "bonfyre-emit"],
+  "optionalModules": ["bonfyre-distribute", "bonfyre-pack", "bonfyre-proxy"],
+  "outputs": ["narrated bulletin", "HTML release page", "RSS feed", "scripted brief"],
+  "compositionNote": "One markdown changelog becomes a spoken release, a publishable page, and a subscription-ready feed. bonfyre-narrate is the differentiator here: verified TTS stays in the same tiny binary graph instead of leaving the pipeline for a third-party voice stack.",
   "demo": true
 }
