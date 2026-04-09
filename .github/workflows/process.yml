@@ -25,7 +25,7 @@ jobs:
           git clone --depth 1 https://github.com/Nickgonzales76017/bonfyre-oss.git /tmp/bonfyre
           chmod +x /tmp/bonfyre/scripts/build-portable-runtime.sh
           /tmp/bonfyre/scripts/build-portable-runtime.sh \
-            BonfyreBrief BonfyreTag BonfyreNarrate BonfyreRender BonfyreEmit
+            BonfyreBrief BonfyreNarrate BonfyreRender BonfyreEmit
           echo "$HOME/.local/bin" >> "$GITHUB_PATH"
       - name: Detect new files
         id: detect
@@ -53,7 +53,6 @@ jobs:
             case "$ext" in
               md|txt|json)
                 bonfyre-brief "$f" --out "artifacts/${base}.brief.json"
-                bonfyre-tag "artifacts/${base}.brief.json" --out "artifacts/${base}.tags.json"
                 bonfyre-narrate "artifacts/${base}.brief.json" --out "artifacts/${base}.narrate.json"
                 bonfyre-render "artifacts/${base}.narrate.json" --template episode --out "site/episodes/${base}.html"
                 ;;
@@ -61,7 +60,6 @@ jobs:
                 bonfyre-media-prep "$f" --out "artifacts/${base}.prep.json"
                 bonfyre-transcribe "artifacts/${base}.prep.json" --out "artifacts/${base}.transcript.json"
                 bonfyre-brief "artifacts/${base}.transcript.json" --out "artifacts/${base}.brief.json"
-                bonfyre-tag "artifacts/${base}.brief.json" --out "artifacts/${base}.tags.json"
                 ;;
             esac
           done < /tmp/changed_files.txt
