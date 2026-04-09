@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Release Radio Demo Feed</title>
+    <description>Bonfyre demo feed emitted from the release-note pipeline.</description>
+    <link>https://nickgonzales76017.github.io/pages-release-radio/</link>
+    <item>
+      <title>GitHub-native intake rollout</title>
+      <description>Shared runtime extraction, safer intake, and seeded live demos across the Pages fleet.</description>
+      <guid>release-radio-demo-2026-04</guid>
+    </item>
+  </channel>
+</rss>

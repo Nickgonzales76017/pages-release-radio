@@ -10,11 +10,56 @@
   "optionalModules": ["bonfyre-distribute", "bonfyre-pack", "bonfyre-proxy"],
   "outputs": ["narrated bulletin", "HTML release page", "RSS feed", "scripted brief"],
   "compositionNote": "One markdown changelog becomes a spoken release, a publishable page, and a subscription-ready feed. bonfyre-narrate is the differentiator here: verified TTS stays in the same tiny binary graph instead of leaving the pipeline for a third-party voice stack.",
+  "moduleNotes": {
+    "bonfyre-brief": "bonfyre-brief is the first live transformation here. It turns the raw ship note into the structured brief that every other stage can reuse.",
+    "bonfyre-narrate": "bonfyre-narrate turns the shared release brief into a spoken bulletin without leaving the Bonfyre graph.",
+    "bonfyre-render": "bonfyre-render converts the same release artifact into a publishable surface for the web.",
+    "bonfyre-emit": "bonfyre-emit packages the rendered outputs into the actual release channels like feed payloads and static publish targets.",
+    "bonfyre-distribute": "bonfyre-distribute is an easy next stage when the same release needs to fan out across multiple channels.",
+    "bonfyre-pack": "bonfyre-pack is the packaging layer if you want one bundled release object instead of loose outputs.",
+    "bonfyre-proxy": "bonfyre-proxy lets the same tiny release graph sit behind an OpenAI-compatible interface when you want remote invocation."
+  },
+  "moduleActions": {
+    "bonfyre-brief": {
+      "href": "demos/release-radio/scripted-brief.md",
+      "label": "Open scripted brief"
+    },
+    "bonfyre-narrate": {
+      "href": "demos/release-radio/narrated-bulletin.txt",
+      "label": "Open narrated bulletin"
+    },
+    "bonfyre-render": {
+      "href": "demos/release-radio/release-page.html",
+      "label": "Open rendered page"
+    },
+    "bonfyre-emit": {
+      "href": "demos/release-radio/feed.xml",
+      "label": "Open emitted feed"
+    }
+  },
   "outputNotes": {
     "narrated bulletin": "bonfyre-narrate turns the release brief into spoken audio inside the same pipeline. The point is not just TTS, it is verified narration that stays inside Bonfyre instead of jumping out to a third-party voice vendor.",
     "HTML release page": "bonfyre-render and bonfyre-emit take the same release artifact and turn it into a publishable web page without rebuilding the content model.",
     "RSS feed": "This output is the subscription surface. bonfyre-emit can package the release as feed-ready metadata so the same release artifact can power broadcast distribution.",
     "scripted brief": "The scripted brief is the shared source object in this app. bonfyre-brief creates it first, then narration, rendering, and feed generation branch off from there."
+  },
+  "outputLinks": {
+    "narrated bulletin": {
+      "href": "demos/release-radio/narrated-bulletin.txt",
+      "label": "Open narrated bulletin"
+    },
+    "HTML release page": {
+      "href": "demos/release-radio/release-page.html",
+      "label": "Open rendered release page"
+    },
+    "RSS feed": {
+      "href": "demos/release-radio/feed.xml",
+      "label": "Open RSS feed"
+    },
+    "scripted brief": {
+      "href": "demos/release-radio/scripted-brief.md",
+      "label": "Open scripted brief"
+    }
   },
   "demo": true
 }

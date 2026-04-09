@@ -1,0 +1,4 @@
+Release Radio demo bulletin
+
+This spoken-style bulletin comes from the same scripted brief used for the release page and feed output.
+bonfyre-narrate keeps the narration step inside the Bonfyre pipeline instead of sending the brief to a separate voice stack.
