@@ -47,6 +47,7 @@ jobs:
         if: steps.detect.outputs.skip != 'true'
         run: |
           mkdir -p artifacts site
+          mkdir -p site/episodes site/feed
 
           while IFS= read -r f; do
             [ -f "$f" ] || continue
@@ -63,7 +64,6 @@ jobs:
                 ;;
             esac
           done < /tmp/changed_files.txt
-          mkdir -p site/episodes site/feed
       - name: Commit results
         if: steps.detect.outputs.skip != 'true'
         run: |
