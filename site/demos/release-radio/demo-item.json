@@ -61,5 +61,43 @@
       "label": "Open scripted brief"
     }
   },
+  "compare": {
+    "title": "With And Without The New Layer",
+    "note": "The floor is still useful on its own. The orchestration layer keeps the same Bonfyre core but fans the release into more surfaces when the control gates say it is worth it.",
+    "floor": {
+      "kicker": "Deterministic Floor",
+      "title": "Just the core release brief",
+      "copy": "This is the thin always-on path: ingest, canon, and brief. It gives you the release object without any orchestration-dependent fanout.",
+      "modules": ["bonfyre-ingest", "bonfyre-canon", "bonfyre-brief"],
+      "metrics": {
+        "policy score": "0.560",
+        "latency": "0.310",
+        "utility": "0.690",
+        "outputs": "1 core artifact"
+      },
+      "outputs": ["scripted brief"],
+      "links": [
+        { "href": "demos/release-radio/scripted-brief.md", "label": "Open floor artifact" }
+      ]
+    },
+    "layered": {
+      "kicker": "Orchestrated Layer",
+      "title": "Same release, more realized surfaces",
+      "copy": "When the orchestration layer clears its own control gates, the same release artifact can branch into narration, web publishing, and feed distribution without changing the source object model.",
+      "modules": ["bonfyre-brief", "bonfyre-narrate", "bonfyre-render", "bonfyre-emit"],
+      "metrics": {
+        "policy score": "0.603",
+        "uplift": "+0.043",
+        "latency delta": "+0.077",
+        "outputs": "4 realized surfaces"
+      },
+      "outputs": ["narrated bulletin", "HTML release page", "RSS feed", "scripted brief"],
+      "links": [
+        { "href": "demos/release-radio/narrated-bulletin.txt", "label": "Open narrated bulletin" },
+        { "href": "demos/release-radio/release-page.html", "label": "Open release page" },
+        { "href": "demos/release-radio/feed.xml", "label": "Open RSS feed" }
+      ]
+    }
+  },
   "demo": true
 }
