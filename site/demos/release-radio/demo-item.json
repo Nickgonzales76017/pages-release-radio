@@ -70,10 +70,9 @@
       "copy": "This is the thin always-on path: ingest, canon, and brief. It gives you the release object without any orchestration-dependent fanout.",
       "modules": ["bonfyre-ingest", "bonfyre-canon", "bonfyre-brief"],
       "metrics": {
-        "policy score": "0.560",
-        "latency": "0.310",
-        "utility": "0.690",
-        "outputs": "1 core artifact"
+        "Best for": "Fast release updates",
+        "You get": "One clean script to publish from",
+        "Good when": "You only need the essential release artifact"
       },
       "outputs": ["scripted brief"],
       "links": [
@@ -86,10 +85,9 @@
       "copy": "When the orchestration layer clears its own control gates, the same release artifact can branch into narration, web publishing, and feed distribution without changing the source object model.",
       "modules": ["bonfyre-brief", "bonfyre-narrate", "bonfyre-render", "bonfyre-emit"],
       "metrics": {
-        "policy score": "0.603",
-        "uplift": "+0.043",
-        "latency delta": "+0.077",
-        "outputs": "4 realized surfaces"
+        "Adds": "Narration, page, and feed outputs",
+        "Why it matters": "One source can ship everywhere",
+        "Keeps": "The same underlying release artifact"
       },
       "outputs": ["narrated bulletin", "HTML release page", "RSS feed", "scripted brief"],
       "links": [
