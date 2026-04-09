@@ -1,0 +1,55 @@
+[
+  {
+    "id": "demo-release-radio-april",
+    "file": "release-2026-04-ship-notes.md",
+    "time": "Demo dataset",
+    "status": "complete",
+    "brief": "Release broadcast summarizes the new GitHub-native intake flow, shared runtime extraction, and the demo-data seeding pass across the Pages fleet.",
+    "tags": ["runtime", "pages", "breaking-change"],
+    "flagged": true,
+    "demo": true,
+    "outputs": ["narrated bulletin", "HTML release page", "RSS feed", "scripted brief"],
+    "outputNotes": {
+      "narrated bulletin": "A narrated version helps teams absorb the release quickly without reading the whole changelog.",
+      "HTML release page": "The release page is the fastest public-facing summary to ship.",
+      "RSS feed": "The feed matters when you want the same release artifact to fan out to subscribers and downstream tools.",
+      "scripted brief": "The scripted brief is the shared release source that all the other surfaces branch from."
+    },
+    "outputLinks": {
+      "narrated bulletin": { "href": "demos/release-radio/narrated-bulletin.txt", "label": "Open narrated bulletin" },
+      "HTML release page": { "href": "demos/release-radio/release-page.html", "label": "Open rendered release page" },
+      "RSS feed": { "href": "demos/release-radio/feed.xml", "label": "Open RSS feed" },
+      "scripted brief": { "href": "demos/release-radio/scripted-brief.md", "label": "Open scripted brief" }
+    },
+    "searchSummary": "GitHub-native intake, safer launch paths, seeded Pages demo rollout.",
+    "whyItMatters": "This release is part of a family. Search makes it easier to spot repeated themes like intake safety, multi-surface publishing, and runtime consolidation across multiple releases.",
+    "searchIntro": "Search across the release set to see how one artifact family turns into a running product narrative over time.",
+    "searchOutputs": ["RSS feed", "HTML release page"]
+  },
+  {
+    "id": "demo-release-radio-march",
+    "file": "release-2026-03-runtime-cutover.md",
+    "time": "Demo dataset",
+    "status": "complete",
+    "brief": "This earlier release introduced the shared runtime contract and cut down per-app workflow duplication so Pages apps could publish from the same Bonfyre path.",
+    "tags": ["runtime", "workflow", "shared-runtime"],
+    "flagged": false,
+    "demo": true,
+    "outputs": ["HTML release page", "scripted brief"],
+    "searchSummary": "Shared runtime contract, workflow reduction, single publish path.",
+    "whyItMatters": "Together with the April release, this shows that release search is not just about one post. It lets teams compare platform changes across time."
+  },
+  {
+    "id": "demo-release-radio-february",
+    "file": "release-2026-02-demo-seeding.md",
+    "time": "Demo dataset",
+    "status": "complete",
+    "brief": "This release seeded first-visit demo data across the Pages fleet so every app showed a working flow before users uploaded their own material.",
+    "tags": ["pages", "demo-data", "onboarding"],
+    "flagged": false,
+    "demo": true,
+    "outputs": ["RSS feed", "scripted brief"],
+    "searchSummary": "First-visit demo data, onboarding, seeded Pages experience.",
+    "whyItMatters": "Release search becomes useful when users can pull together related changes like onboarding, runtime work, and publishing from one set of artifacts."
+  }
+]
