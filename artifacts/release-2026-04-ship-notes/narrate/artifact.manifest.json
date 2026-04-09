@@ -3,7 +3,7 @@
   "version": "3.0.0",
   "artifactType": "narrated-artifact",
   "title": "Bonfyre Artifact",
-  "createdAt": "2026-04-09T14:05:15Z",
+  "createdAt": "2026-04-09T16:14:49Z",
   "sourceTextPath": "artifacts/release-2026-04-ship-notes/brief/brief.md",
   "narrationTextPath": "artifacts/release-2026-04-ship-notes/narrate/narration.txt",
   "narrationFormat": "paced-text",
