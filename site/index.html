@@ -464,7 +464,7 @@ function renderBoard() {
     const statusColor = BonfyreGitHubJobs.statusColor(h.status);
     const statusLabel = BonfyreGitHubJobs.statusLabel(h.status);
     
-    html += `<div class="card"><h3>📻 ${h.file}</h3><div class="card-meta"><span>${h.time}</span><span style="color:${statusColor}">${statusLabel}</span></div><div class="card-body">${h.brief || "<em style=\"color:var(--dim)\">Broadcasting release…</em>"}</div>${renderCapabilityBlock(h)}<div class="card-tags">${h.flagged ? "<span class=\"tag tag-urgent\">BREAKING</span>" : ""}${(h.tags||[]).map(t=>`<span class="tag">${t}</span>`).join("")}</div></div>`;
+    html += `<div class="card" data-item-id="${escapeHtml(h.id)}"><h3>📻 ${h.file}</h3><div class="card-meta"><span>${h.time}</span><span style="color:${statusColor}">${statusLabel}</span></div><div class="card-body">${h.brief || "<em style=\"color:var(--dim)\">Broadcasting release…</em>"}</div>${renderCapabilityBlock(h)}<div class="card-tags">${h.flagged ? "<span class=\"tag tag-urgent\">BREAKING</span>" : ""}${(h.tags||[]).map(t=>`<span class="tag">${t}</span>`).join("")}</div></div>`;
   }
   container.innerHTML = html;
   const countAll = document.getElementById('countAll');

@@ -10,5 +10,11 @@
   "optionalModules": ["bonfyre-distribute", "bonfyre-pack", "bonfyre-proxy"],
   "outputs": ["narrated bulletin", "HTML release page", "RSS feed", "scripted brief"],
   "compositionNote": "One markdown changelog becomes a spoken release, a publishable page, and a subscription-ready feed. bonfyre-narrate is the differentiator here: verified TTS stays in the same tiny binary graph instead of leaving the pipeline for a third-party voice stack.",
+  "outputNotes": {
+    "narrated bulletin": "bonfyre-narrate turns the release brief into spoken audio inside the same pipeline. The point is not just TTS, it is verified narration that stays inside Bonfyre instead of jumping out to a third-party voice vendor.",
+    "HTML release page": "bonfyre-render and bonfyre-emit take the same release artifact and turn it into a publishable web page without rebuilding the content model.",
+    "RSS feed": "This output is the subscription surface. bonfyre-emit can package the release as feed-ready metadata so the same release artifact can power broadcast distribution.",
+    "scripted brief": "The scripted brief is the shared source object in this app. bonfyre-brief creates it first, then narration, rendering, and feed generation branch off from there."
+  },
   "demo": true
 }
