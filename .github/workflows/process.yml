@@ -27,6 +27,8 @@ jobs:
           /tmp/bonfyre/scripts/build-portable-runtime.sh \
             BonfyreBrief BonfyreNarrate BonfyreRender BonfyreEmit
           echo "$HOME/.local/bin" >> "$GITHUB_PATH"
+          echo "BONFYRE_BRIEF_BINARY=$HOME/.local/bin/bonfyre-brief" >> "$GITHUB_ENV"
+          echo "BONFYRE_NARRATE_BINARY=$HOME/.local/bin/bonfyre-narrate" >> "$GITHUB_ENV"
       - name: Detect new files
         id: detect
         run: |
@@ -52,20 +54,16 @@ jobs:
             ext="${f##*.}"
             case "$ext" in
               md|txt|json)
-                bonfyre-brief "$f" --out "artifacts/${base}.brief.json"
-                bonfyre-narrate "artifacts/${base}.brief.json" --out "artifacts/${base}.narrate.json"
-                bonfyre-render "artifacts/${base}.narrate.json" --template episode --out "site/episodes/${base}.html"
+                bonfyre-render artifact "$f" "artifacts/${base}" --title "$base"
+                bonfyre-emit "artifacts/${base}/brief" --format html --out "site/episodes/${base}.html"
+                bonfyre-emit "artifacts/${base}/brief" --format rss --out "site/feed/${base}.rss"
                 ;;
               wav|mp3|m4a|ogg|flac|webm)
-                bonfyre-media-prep "$f" --out "artifacts/${base}.prep.json"
-                bonfyre-transcribe "artifacts/${base}.prep.json" --out "artifacts/${base}.transcript.json"
-                bonfyre-brief "artifacts/${base}.transcript.json" --out "artifacts/${base}.brief.json"
+                echo "Skipping raw audio on portable runner: $f"
                 ;;
             esac
           done < /tmp/changed_files.txt
           mkdir -p site/episodes site/feed
-          bonfyre-emit artifacts/ --out site/ --format html
-          bonfyre-emit artifacts/ --out site/feed/ --format rss
       - name: Commit results
         if: steps.detect.outputs.skip != 'true'
         run: |
