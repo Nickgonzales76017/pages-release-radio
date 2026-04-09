@@ -1,7 +1,7 @@
 {
   "id": "demo-release-radio",
   "file": "release-2026-04-ship-notes.md",
-  "time": "Demo dataset",
+  "time": "Reference corpus",
   "status": "complete",
   "brief": "Release broadcast summarizes the new GitHub-native intake flow, shared runtime extraction, and the demo-data seeding pass across the Pages fleet. The only breaking-style note is that stale browser token flows are gone in favor of safer GitHub-first launch paths.",
   "tags": ["runtime", "pages", "breaking-change"],

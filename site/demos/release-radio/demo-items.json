@@ -2,7 +2,7 @@
   {
     "id": "demo-release-radio-april",
     "file": "release-2026-04-ship-notes.md",
-    "time": "Demo dataset",
+    "time": "Reference corpus",
     "status": "complete",
     "brief": "Release broadcast summarizes the new GitHub-native intake flow, shared runtime extraction, and the demo-data seeding pass across the Pages fleet.",
     "tags": ["runtime", "pages", "breaking-change"],
@@ -21,7 +21,7 @@
       "RSS feed": { "href": "demos/release-radio/feed.xml", "label": "Open RSS feed" },
       "scripted brief": { "href": "demos/release-radio/scripted-brief.md", "label": "Open scripted brief" }
     },
-    "searchSummary": "GitHub-native intake, safer launch paths, seeded Pages demo rollout.",
+    "searchSummary": "GitHub-native intake, safer launch paths, reference Pages demo rollout.",
     "whyItMatters": "This release is part of a family. Search makes it easier to spot repeated themes like intake safety, multi-surface publishing, and runtime consolidation across multiple releases.",
     "searchIntro": "Search across the release set to see how one artifact family turns into a running product narrative over time.",
     "searchOutputs": ["RSS feed", "HTML release page"]
@@ -29,7 +29,7 @@
   {
     "id": "demo-release-radio-march",
     "file": "release-2026-03-runtime-cutover.md",
-    "time": "Demo dataset",
+    "time": "Reference corpus",
     "status": "complete",
     "brief": "This earlier release introduced the shared runtime contract and cut down per-app workflow duplication so Pages apps could publish from the same Bonfyre path.",
     "tags": ["runtime", "workflow", "shared-runtime"],
@@ -42,14 +42,14 @@
   {
     "id": "demo-release-radio-february",
     "file": "release-2026-02-demo-seeding.md",
-    "time": "Demo dataset",
+    "time": "Reference corpus",
     "status": "complete",
-    "brief": "This release seeded first-visit demo data across the Pages fleet so every app showed a working flow before users uploaded their own material.",
+    "brief": "This release reference first-visit demo data across the Pages fleet so every app showed a working flow before users uploaded their own material.",
     "tags": ["pages", "demo-data", "onboarding"],
     "flagged": false,
     "demo": true,
     "outputs": ["RSS feed", "scripted brief"],
-    "searchSummary": "First-visit demo data, onboarding, seeded Pages experience.",
+    "searchSummary": "First-visit demo data, onboarding, reference Pages experience.",
     "whyItMatters": "Release search becomes useful when users can pull together related changes like onboarding, runtime work, and publishing from one set of artifacts."
   }
 ]
